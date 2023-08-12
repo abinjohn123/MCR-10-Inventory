@@ -41,11 +41,8 @@ const EachRow = ({ item }) => {
 
 const ProductListing = () => {
   const { inventory } = useAppContext();
-  let [searchParams, _] = useSearchParams();
-
+  const [searchParams, _] = useSearchParams();
   const filterParams = getParams(searchParams);
-
-  console.log(filterParams);
 
   const getFilteredList = () => {
     const departmentFilter = filterParams.department
