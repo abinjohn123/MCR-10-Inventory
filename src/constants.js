@@ -8,25 +8,63 @@ export const OVERVIEW_CARDS_LABEL_MAPPING = {
   2: 'Low Stock Items',
 };
 
+export const DEPARTMENT_FILTERS = {
+  ALL: {
+    label: 'All',
+    value: -1,
+  },
+  KITCHEN: {
+    label: 'Kitchen',
+    value: 0,
+  },
+  CLOTHING: {
+    label: 'Clothing',
+    value: 1,
+  },
+  TOYS: {
+    label: 'Toys',
+    value: 2,
+  },
+};
+
+export const SORT_KEYS = [
+  {
+    label: 'No Sort',
+    value: 0,
+  },
+  {
+    label: 'Name',
+    value: 1,
+  },
+  {
+    label: 'Price',
+    value: 2,
+  },
+  {
+    label: 'Stock',
+    value: 3,
+  },
+];
+
 export const DEPARTMENTS = [
   {
     label: 'Kitchen',
-    path: './kitchen',
+    param: DEPARTMENT_FILTERS.KITCHEN.value,
   },
   {
     label: 'Clothing',
-    path: './kitchen',
+    param: DEPARTMENT_FILTERS.CLOTHING.value,
   },
   {
     label: 'Toys',
-    path: './kitchen',
+    param: DEPARTMENT_FILTERS.TOYS.value,
   },
 ];
 
 export const inventoryData = [
   {
     id: 1,
-    department: 'Kitchen',
+    department: DEPARTMENT_FILTERS.KITCHEN.value,
     name: 'Stainless Steel Cookware Set',
     description:
       'A set of high-quality stainless steel cookware including pots and pans.',
@@ -39,7 +77,7 @@ export const inventoryData = [
   },
   {
     id: 2,
-    department: 'Kitchen',
+    department: DEPARTMENT_FILTERS.KITCHEN.value,
     name: 'Electric Coffee Maker',
     description:
       'A programmable electric coffee maker for brewing your favorite coffee.',
@@ -53,7 +91,7 @@ export const inventoryData = [
   },
   {
     id: 3,
-    department: 'Clothing',
+    department: DEPARTMENT_FILTERS.CLOTHING.value,
     name: "Men's Casual T-Shirt",
     description: 'A comfortable and stylish t-shirt for casual wear.',
     price: 19.99,
@@ -66,7 +104,7 @@ export const inventoryData = [
   },
   {
     id: 4,
-    department: 'Clothing',
+    department: DEPARTMENT_FILTERS.CLOTHING.value,
     name: "Women's Yoga Pants",
     description: 'High-quality yoga pants for maximum comfort during workouts.',
     price: 29.99,
@@ -79,7 +117,7 @@ export const inventoryData = [
   },
   {
     id: 5,
-    department: 'Toys',
+    department: DEPARTMENT_FILTERS.TOYS.value,
     name: 'Building Blocks Set',
     description:
       'A set of colorful building blocks for creative play and learning.',
@@ -93,7 +131,7 @@ export const inventoryData = [
   },
   {
     id: 6,
-    department: 'Toys',
+    department: DEPARTMENT_FILTERS.TOYS.value,
     name: 'Remote Control Car',
     description:
       'A fun remote control car with realistic features and controls.',
@@ -107,7 +145,7 @@ export const inventoryData = [
   },
   {
     id: 7,
-    department: 'Kitchen',
+    department: DEPARTMENT_FILTERS.KITCHEN.value,
     name: 'Non-Stick Frying Pan',
     description:
       'A durable non-stick frying pan for easy cooking and cleaning.',
@@ -121,7 +159,7 @@ export const inventoryData = [
   },
   {
     id: 8,
-    department: 'Clothing',
+    department: DEPARTMENT_FILTERS.CLOTHING.value,
     name: "Women's Running Shoes",
     description:
       'High-performance running shoes designed for comfort and speed.',
@@ -135,7 +173,7 @@ export const inventoryData = [
   },
   {
     id: 9,
-    department: 'Toys',
+    department: DEPARTMENT_FILTERS.TOYS.value,
     name: 'Educational Puzzle Set',
     description: 'A set of educational puzzles to stimulate young minds.',
     price: 19.95,
@@ -147,7 +185,7 @@ export const inventoryData = [
   },
   {
     id: 10,
-    department: 'Kitchen',
+    department: DEPARTMENT_FILTERS.KITCHEN.value,
     name: 'Blender with Multiple Speeds',
     description:
       'A powerful blender with multiple speed settings for various blending tasks.',
