@@ -27,7 +27,9 @@ const Filters = () => {
             department: e.target.value,
           });
         }}
-        defaultValue={Number(department)}
+        defaultValue={
+          department ? Number(department) : DEPARTMENT_FILTERS.ALL.value
+        }
       >
         {Object.values(DEPARTMENT_FILTERS).map((item, index) => (
           <option value={item.value} key={index}>
