@@ -58,3 +58,72 @@
     font-size: 1.6rem;
   }
 }
+
+.product-listing {
+  height: 100%;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .img-container {
+    height: 75px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.table-grid {
+  display: grid;
+  grid-template-columns: 100px 250px 1fr 80px 40px 180px;
+  column-gap: 16px;
+}
+
+.table-header {
+  background-color: var(--violet-4);
+  font-weight: bold;
+  padding: 8px;
+}
+
+.text-ellipsis {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-body {
+  height: 100%;
+  overflow-y: auto;
+  border: 1px solid var(--violet-4);
+  border-top: none;
+}
+
+.table-row {
+  @extend .cur-p;
+  div,
+  p {
+    @extend .d-flex-c-start;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--violet-4);
+  }
+
+  &:hover {
+    background-color: var(--violet-3);
+  }
+
+  .item-name {
+    font-weight: 600;
+    color: var(--violet-11);
+  }
+  .item-description {
+    display: -webkit-box; /* Necessary to use the line-clamp property */
+    -webkit-box-orient: vertical; /* Controls the direction of the children along the flexbox/container */
+    -webkit-line-clamp: 3; /* Number of lines to display */
+    overflow: hidden;
+  }
+}
