@@ -13,6 +13,8 @@ const getParams = (urlObj) => {
 
 const Filters = () => {
   let [searchParams, setSearchParams] = useSearchParams();
+  const { department } = getParams(searchParams);
+
   return (
     <>
       <select
@@ -25,6 +27,7 @@ const Filters = () => {
             department: e.target.value,
           });
         }}
+        defaultValue={Number(department)}
       >
         {Object.values(DEPARTMENT_FILTERS).map((item, index) => (
           <option value={item.value} key={index}>
