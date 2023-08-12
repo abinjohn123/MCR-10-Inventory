@@ -95,6 +95,13 @@ const ProductListing = () => {
         <p>Supplier</p>
       </div>
       <div className="table-body">
+        {getFilteredList().length === 0 && (
+          <div className="py64 d-flex">
+            <p className="my64">
+              No products match the filters. <br /> Please try another filter
+            </p>
+          </div>
+        )}
         {getFilteredList().map((item) => (
           <EachRow key={item.id} item={item}></EachRow>
         ))}
