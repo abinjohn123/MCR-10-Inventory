@@ -18,7 +18,7 @@ const Home = () => {
   );
 
   return (
-    <div className="p32 d-flex-c-start gap16">
+    <div className="p32 d-flex-c-start gap24">
       {[totalStock, totalDelivered, lowStock].map((item, index) => (
         <div className="card overview-card p16" key={index}>
           <p className={`number mb8 color--${index}`}>{item}</p>

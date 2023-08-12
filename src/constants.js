@@ -8,6 +8,21 @@ export const OVERVIEW_CARDS_LABEL_MAPPING = {
   2: 'Low Stock Items',
 };
 
+export const DEPARTMENTS = [
+  {
+    label: 'Kitchen',
+    path: './kitchen',
+  },
+  {
+    label: 'Clothing',
+    path: './kitchen',
+  },
+  {
+    label: 'Toys',
+    path: './kitchen',
+  },
+];
+
 export const inventoryData = [
   {
     id: 1,
