@@ -7,16 +7,19 @@
   align-items: stretch;
   justify-content: start;
   height: 100%;
-  background-color: var(--violet-11);
+  background-color: var(--violet-12);
 
   .menu-item {
-    padding: 8px;
+    padding: 16px 8px;
     text-decoration: none;
     color: var(--violet-1);
 
     &.active {
       color: var(--violet-1);
-      background-color: var(--violet-5);
+      background-color: var(--violet-9);
+    }
+    &:hover {
+      background-color: var(--violet-11);
     }
   }
 }
