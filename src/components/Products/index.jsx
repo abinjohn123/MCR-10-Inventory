@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { useAppContext } from '../../context/AppContext';
 
 import Filters from './Filters';
@@ -82,6 +82,9 @@ const ProductListing = () => {
       <div className="header d-flex-c-s mb16">
         <h2>Products</h2>
         <Filters />
+        <Link to="./new" className="new-item">
+          New
+        </Link>
       </div>
       <div className="table-header table-grid">
         <p>Image</p>

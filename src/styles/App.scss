@@ -126,3 +126,60 @@
     overflow: hidden;
   }
 }
+
+.new-item {
+  cursor: pointer;
+  background-color: var(--violet-9);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+
+  &:link,
+  &:visited,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: var(--violet-11);
+  }
+}
+
+.new-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .label {
+    color: var(--gray-10);
+    font-size: 1.4rem;
+
+    &::after {
+      content: ':';
+    }
+  }
+
+  .form-input {
+    padding: 8px;
+
+    &.--textarea {
+      resize: none;
+    }
+  }
+}
+
+.btn-submit {
+  background-color: var(--violet-10);
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}

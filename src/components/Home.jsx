@@ -6,8 +6,8 @@ const Home = () => {
 
   const { totalStock, totalDelivered, lowStock } = inventory.reduce(
     (acc, item) => ({
-      totalStock: acc.totalStock + item.stock,
-      totalDelivered: acc.totalDelivered + item.delivered,
+      totalStock: acc.totalStock + Number(item.stock),
+      totalDelivered: acc.totalDelivered + Number(item.delivered),
       lowStock: item.stock <= 10 ? acc.lowStock + 1 : acc.lowStock,
     }),
     {
