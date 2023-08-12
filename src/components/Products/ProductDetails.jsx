@@ -21,7 +21,7 @@ const ProductDetails = () => {
 
       <p className="mb4">
         Department:{' '}
-        {DEPARTMENTS.find((entry) => entry.param === department).label}
+        {DEPARTMENTS.find((entry) => entry.param === Number(department)).label}
       </p>
       <p className="mb4">Price: ${price}</p>
       <p className="mb4">Stock: {stock}</p>
