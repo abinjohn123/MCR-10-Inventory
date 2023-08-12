@@ -1,4 +1,4 @@
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams, Link, useNavigate } from 'react-router-dom';
 import { useAppContext } from '../../context/AppContext';
 
 import Filters from './Filters';
@@ -14,9 +14,13 @@ const getParams = (urlObj) => {
 
 const EachRow = ({ item }) => {
   const { name, id, imageUrl, description, price, stock, supplier } = item;
+  const navigate = useNavigate();
 
   return (
-    <div className="table-grid table-row p8">
+    <div
+      className="table-grid table-row p8"
+      onClick={() => navigate(`./${id}`)}
+    >
       <div className="img-container">
         <img src={imageUrl} alt={name} />
       </div>

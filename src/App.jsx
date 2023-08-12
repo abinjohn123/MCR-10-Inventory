@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Departments from './components/Departments';
 import ProductListing from './components/Products';
 import NewProduct from './components/Products/NewProduct';
+import ProductDetails from './components/Products/ProductDetails';
 import './styles/App.scss';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/departments" element={<Departments />} />
         <Route path="/products" element={<ProductListing />} />
         <Route path="/products/new" element={<NewProduct />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
       </Routes>
     </>
   );
