@@ -2,6 +2,12 @@ export const LOCAL_STORAGE_KEYS = {
   INVENTORY: 'neog_mcr_10_inventory',
 };
 
+export const OVERVIEW_CARDS_LABEL_MAPPING = {
+  0: 'Total Stock',
+  1: 'Total Delivered',
+  2: 'Low Stock Items',
+};
+
 export const inventoryData = [
   {
     id: 1,

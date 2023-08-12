@@ -1,5 +1,9 @@
 @import './reuse';
 @import '@radix-ui/colors/violet.css';
+@import '@radix-ui/colors/green.css';
+@import '@radix-ui/colors/yellow.css';
+@import '@radix-ui/colors/red.css';
+@import '@radix-ui/colors/gray.css';
 
 .sidebar {
   @extend .d-flex;
@@ -21,5 +25,36 @@
     &:hover {
       background-color: var(--violet-11);
     }
+  }
+}
+
+.card {
+  border-radius: 8px;
+  background-color: var(--gray-2);
+  box-shadow: 0 5px 5px var(--violet-2);
+  border: 1px solid var(--violet-4);
+}
+
+.overview-card {
+  width: 240px;
+  text-align: center;
+
+  .number {
+    font-weight: 600;
+    font-size: 2.4rem;
+
+    &.color--0 {
+      color: var(--green-9);
+    }
+    &.color--1 {
+      color: var(--yellow-10);
+    }
+    &.color--2 {
+      color: var(--red-9);
+    }
+  }
+
+  .label {
+    font-size: 1.6rem;
   }
 }
