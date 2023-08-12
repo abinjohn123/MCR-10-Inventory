@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import './styles/reuse';
+@import '@radix-ui/colors/violet.css';
+@import '@radix-ui/colors/slate.css';
+$space: 64;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--violet-1);
+  color: var(--slate-12);
+}
+
+@while $space >=0 {
+  @include spacing($space);
+  $space: $space - 2;
+}
+
+button {
+  all: unset;
+  font-family: 'Inter', sans-serif;
+}
+
+body,
+#root {
+  height: 100vh;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: start;
+}
